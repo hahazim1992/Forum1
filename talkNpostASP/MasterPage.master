@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 406px;
+            height: 108px;
+        }
+        .auto-style2 {
+            margin-left: 0px;
+        }
+        .auto-style3 {
+            width: 100%;
+            height: 167px;
+        }
+        .auto-style4 {
+            height: 108px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div aria-hidden="True">
+        <table style="border-width: 0px; font-family: arial, Helvetica, sans-serif;" cellspacing="0" class="auto-style3">
+            <tr style="border-spacing: 0px">
+                <td class="auto-style1" style="background-color: #805844; width: 30%;">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/icon.PNG" Height="87px" Width="111px" />
+                </td>
+                <td style="background-color: #805844" class="auto-style4">
+                    <asp:TextBox ID="txtsearch" runat="server" CssClass="auto-style2" Width="371px"></asp:TextBox>
+                &nbsp;
+                    <asp:Button ID="btnsearch" runat="server" Height="22px" Text="Search" Width="58px" OnClick="btnsearch_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <asp:Button ID="btnhome" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Height="40px" Text="Home" Width="150px" OnClick="btnhome_Click" CausesValidation="False" />
+                <asp:Button ID="btnbrowse" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Browse" Width="150px" OnClick="btnbrowse_Click" CausesValidation="False" />
+                <asp:Button ID="btnprofile" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Profile" Width="150px" OnClick="btnprofile_Click" CausesValidation="False" />
+                <asp:Button ID="btncreate" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Create" Width="150px" OnClick="btncreate_Click" CausesValidation="False" />
+                <asp:Button ID="btnupdatecontent" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Update Content" Width="150px" OnClick="btnupdatecontent_Click" CausesValidation="False" />
+                <asp:Button ID="btnlogout" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Logout" Width="150px" OnClick="btnlogout_Click" CausesValidation="False" />
+                    <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #805844">TalkNPost Designed by Hazim</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPagenotlogged.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 406px;
+            height: 108px;
+        }
+        .auto-style2 {
+            margin-left: 0px;
+        }
+        .auto-style3 {
+            width: 100%;
+            height: 167px;
+        }
+        .auto-style4 {
+            height: 108px;
+        }
+    
+        .auto-style12 {
+            width: 304px;
+            height: 38px;
+        }
+        .auto-style11 {
+            width: 304px;
+            height: 108px;
+        }
+        .auto-style10 {
+            margin-left: 6px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div aria-hidden="True">
+        <table style="border-width: 0px; font-family: arial, Helvetica, sans-serif;" cellspacing="0" class="auto-style3">
+            <tr style="border-spacing: 0px">
+                <td class="auto-style1" style="background-color: #805844">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/icon.PNG" Height="87px" Width="111px" />
+                </td>
+                <td style="background-color: #805844" class="auto-style4">
+                    <asp:TextBox ID="txtsearch" runat="server" CssClass="auto-style2" Width="371px"></asp:TextBox>
+                &nbsp;
+                    <asp:Button ID="btnsearch" runat="server" Height="22px" Text="Search" Width="58px" OnClick="btnsearch_Click" CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+    <table style="width:100%;">
+        <tr>
+            <td class="auto-style12" valign="top">
+                <asp:Button ID="btnhome" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Height="40px" Text="Home" Width="150px" OnClick="btnhome_Click" CausesValidation="False" />
+                <asp:Button ID="btnbrowseall" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" ForeColor="Black" Height="40px" Text="Browse" Width="153px" OnClick="btnbrowseall_Click" CausesValidation="False" />
+            </td>
+            <td rowspan="2" style="background-image: none" valign="bottom">&nbsp;<asp:Image ID="Image4" runat="server" Height="147px" ImageAlign="Right" ImageUrl="~/images/bubble.png" Width="226px" />
+                            <asp:Label ID="lblintro" runat="server" Text="Welcome!" BackColor="White" BorderStyle="Solid" Font-Bold="True" Font-Names="Algerian" Font-Size="XX-Large"></asp:Label>
+                        <br />
+                            <asp:Label ID="Label20" runat="server" Text="Welcome to TalkNPost.com where you can upload your thoughts and mind for all to see and hear. You may browse the content without logging. However! If you register now, you will be able to post your own content. And, if you choose to be a premium user, you may see contents only this level is allowed to see! well what are you waiting for? Come and join the family!" Width="70%" BackColor="#A3836B" BorderStyle="Solid" BorderWidth="3px" Font-Names="Century Gothic" Font-Size="X-Large"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="padding: 5px; border: 1px solid #000000;">
+                <br />
+                <br />
+                <asp:Label ID="Label18" runat="server" Text="Username"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="txtusername" runat="server" Width="198px" ></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label19" runat="server" Text="Password"></asp:Label>
+&nbsp;&nbsp;
+                <asp:TextBox ID="txtpassword" runat="server" TextMode="Password" Width="195px" ></asp:TextBox>
+                <br />
+                <br />
+                <br />
+                <asp:Button ID="btnlogin" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Height="40px" Text="Login" Width="144px" OnClick="btnlogin_Click" CssClass="auto-style10" CausesValidation="False" />
+            &nbsp;<asp:Button ID="btnregister" runat="server" BackColor="#90705A" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Height="40px" Text="Register" Width="140px" OnClick="btnregister_Click" CausesValidation="False" />
+            </td>
+        </tr>
+    </table>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #805844">TalkNPost Designed by Hazim</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
